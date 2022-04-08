@@ -1,3 +1,4 @@
+""" This program is used to calculate distance travelled by molecules. """
 import MDAnalysis as mda                                             #     ________________________
 import numpy as np                                                   #     |  importing modules   |
 import matplotlib.pyplot as plt                                      #     ------------------------
