@@ -1,8 +1,9 @@
-import numpy as np
-from math import*
-import MDAnalysis as mda
-import matplotlib.pyplot as plt
-import random
+"""Code to calculate non-gaussian parameter (NGP). """
+import numpy as np                                          #           *********************
+from math import*                                           #           * importing modules *
+import MDAnalysis as mda                                    #           *********************
+import matplotlib.pyplot as plt                             #
+import random                                               #
 import MDAnalysis.analysis.msd as msd
 
 u=mda.Universe("../prod.gro","../md.xtc")
