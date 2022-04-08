@@ -1,12 +1,12 @@
-import MDAnalysis as mda
-import numpy as np
-import matplotlib.pyplot as plt
-from math import*
+import MDAnalysis as mda                                             #     ________________________
+import numpy as np                                                   #     |  importing modules   |
+import matplotlib.pyplot as plt                                      #     ------------------------
+from math import*                                                    #  
 
-str_1=str(input("Enter structure filename = "))
-str_2=str(input("\nEnter trajectory filename = "))
-dummy_t=int(input("\nEnter frames = "))
-temp=str(input("Enter temperature = "))
+str_1=str(input("Enter structure filename = "))                      #     _________________________
+str_2=str(input("\nEnter trajectory filename = "))                   #     |   taking user inputs  |
+dummy_t=int(input("\nEnter frames = "))                              #     -------------------------
+temp=str(input("Enter temperature = "))                              #
 
 print("structure taken was = ",str_1," trajectory file taken = ",str_2,"dummy_t = ",dummy_t)
 u=mda.Universe(str_1,str_2)
@@ -14,7 +14,7 @@ trj=u.trajectory
 
 #********************************************************************************************
 def r_cm_giver(fr):
-    n=np.shape(fr)[0]
+    n=np.shape(fr)[0]                                                            #    defination for calculation of center of mass
     a=[]
     for i in range(1000):
         b=[]
@@ -42,7 +42,7 @@ def modular_r_giver(l,t_start,t_stop):
     return outp
 #********************************************************************************************
 def Rg_giver(modular_r):
-    answer=[]
+    answer=[]                                                                        #        defination for calculation of radius of gyration.
     n=np.shape(modular_r)[0]
     for i in range(np.shape(modular_r)[1]):
         sumn=0
